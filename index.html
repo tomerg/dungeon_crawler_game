@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+   <link rel="stylesheet" type="text/css" href="normalize.css">
+   <link href="https://fonts.googleapis.com/css?family=Bungee+Shade" rel="stylesheet">
+  <script src="node_modules/jquery/dist/jquery.js"></script>
+  <script type="text/javascript" src='keyboard.js'></script>
+</head>
+<body>
+<!-- <audio src='sound/medival-master.mp3' autoplay loop></audio> -->
+  <div class="container clearfix">
+    <div class="primary col">
+      <div id='board'>
+      </div>
+        <div class="arrow">
+          <img src="img/finish2.png">
+        </div>
+    </div>
+    <div class="secondary col">
+      <div id="score">
+        <h1>Dungeon Crawler</h1>
+        <div class="score-info">
+          <h2 class="score-title">SCORE: <span id='score-number'>0</span></h2>
+          <h4 id='ded'></h4>
+          <button id="refresh">Try Again!</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+<script type="text/javascript" src='board.js'></script>
+<script type="text/javascript" src='gameobj.js'></script>
+<!-- <script type="text/javascript" src='player.js'></script> -->
+ <script type="text/javascript" src='ui.js'></script>
+
+
+</script>
+<script src='level1.js'></script>
+<script src='level2.js'></script>
+<script src='game.js'></script>
+</body>
+</html>

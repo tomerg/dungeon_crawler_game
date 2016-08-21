@@ -1,0 +1,202 @@
+/* ================================= 
+  Base Element Styles
+==================================== */
+
+* {
+  box-sizing: border-box;
+  line-height: 1.6;
+}
+
+body {
+  background-color: #373C44;
+  background: url('img/bg-main-min.jpg') no-repeat;
+}
+
+p {
+  font-size: .95em;
+  margin-bottom: 1.8em;
+}
+
+a {
+  text-decoration: none;
+}
+
+div .square {
+  box-sizing: border-box;
+  height: 100%;
+  min-height: 1px;
+  display: inline-block;
+  float: left;
+  background-color: rgba(0,0,0,0);
+  border-radius: 12px;
+  overflow: visible;
+  position: relative;
+}
+
+h1, h2, #ded {
+  font-family: 'Bungee Shade', cursive;
+  color: #F15923;
+  letter-spacing: 2px;
+}
+button {
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+  -webkit-box-shadow: -8px 12px 5px -2px rgba(0,0,0,0.58);
+  -moz-box-shadow: -8px 12px 5px -2px rgba(0,0,0,0.58);
+  box-shadow: -8px 12px 5px -2px rgba(0,0,0,0.58);
+  border: 2px solid #000000;
+  background-color: #1EA7B2;
+  display:none;
+  margin-left: 38% !important;
+  opacity: 1;
+  padding: 5px;
+}
+
+/* ================================= 
+  Base Layout Styles
+==================================== */
+
+#board {
+  width: 797px;
+  height: 600px;
+  border-radius: 12px;
+  /*background: url('img/dungeon-crawler2.gif') no-repeat;*/
+  background-size: contain;
+  padding-left: 100px;
+  padding-right: 40px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  box-sizing: border-box;
+  -webkit-box-shadow: -5px 8px 5px -1px rgba(0,0,0,0.66);
+  -moz-box-shadow: -5px 8px 5px -1px rgba(0,0,0,0.66);
+  box-shadow: -5px 8px 5px -1px rgba(0,0,0,0.66);
+}
+
+.square > img {
+  height: 300%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.col {
+  padding-right: 1em;
+  padding-left: 1em;
+  margin-top: 1em;
+}
+
+.score-info {
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+  -webkit-box-shadow: -8px 12px 5px -2px rgba(0,0,0,0.58);
+  -moz-box-shadow: -8px 12px 5px -2px rgba(0,0,0,0.58);
+  box-shadow: -8px 12px 5px -2px rgba(0,0,0,0.58);
+  border: 2px solid #F15923;
+  opacity: 0.6;
+  background-color: #000000;
+  width: 400px;
+  height: 220px;
+}
+
+.score-title {
+  text-align: center;
+}
+
+.arrow {
+  float: right;
+  margin-top: -70px;
+  padding-right: 15px;
+  z-index: 1000;
+}
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+@media (min-width: 769px) {
+
+
+  .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .col {
+    float: left;
+  }
+
+  .primary,
+  .secondary {
+    width: 50%;
+  }
+
+  .tagline {
+    font-size: 1.4em;
+  }
+
+  /* ---- Float clearfix ---- */
+
+  .clearfix::after {
+    content: " ";
+    display: table;
+    clear: both;
+  }
+
+}
+
+@media (min-width: 1025px) {
+  
+  .container {
+    width: 100%;
+    /*max-width: 1150px;*/
+  }
+
+  .primary {
+    width: 65%;
+  }
+
+  .secondary{
+    width: 35%;
+  }
+
+}
+
+/* Animations */
+
+
+@-webkit-keyframes walk {
+    from { background-position: 0px; }
+    to { background-position: -1500px; }  /* <-- width of spritesheet*/
+}
+
+@-moz-keyframes walk {
+    from { background-position: 0px; }
+    to { background-position: -1500px; } /* <-- width of spritesheet*/
+}
+
+@-o-keyframes walk {
+    from { background-position: 0px; }
+    to { background-position: -1500px; } /* <-- width of spritesheet*/
+}
+
+@keyframes walk {
+    from { background-position: 0px; }
+    to { background-position: -1500px; } /* <-- width of spritesheet*/
+}
+
+.hero {
+    width: 125px; height: 142px; /* <--  size of a single frame*/
+    background-image: url("img/hero-sprite3.png"); /* <-- url to spritesheet*/
+    margin: 0 auto;    
+    -webkit-animation: walk 2s steps(12) infinite; 
+    -moz-animation: walk 2s steps(12) infinite;
+    -o-animation: walk 2s steps(12) infinite;
+    animation: walk 2s steps(12) infinite; /* <-- animation parameters, see below*/
+}​
+
+
+
+
+
+
+
